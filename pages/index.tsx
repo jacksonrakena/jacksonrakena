@@ -73,6 +73,10 @@ const Home: NextPage = () => {
             href="https://redirects.jacksonrakena.com/discord"
           >
             My Discord server
+          </ColorLink>{" "}
+          &bull;{" "}
+          <ColorLink linkProps={{ textDecor: "none" }} href="/footprint">
+            Footprint
           </ColorLink>
         </Box>
       </Container>
