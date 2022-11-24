@@ -42,9 +42,15 @@ export const AboutMe = () => {
             </HStack>
             <HStack spacing={2} alignItems={"center"}>
               <Icon w={5} h={5} as={BsTwitter} />
-              <ColorLink href="https://twitter.com/horrificcrimes">
-                @horrificcrimes
-              </ColorLink>
+              <HStack spacing={1}>
+                <ColorLink href="https://twitter.com/horrificcrimes">
+                  @horrificcrimes
+                </ColorLink>
+                <Box>&bull;</Box>
+                <ColorLink href="https://mastodon.nz/@jackson">
+                  @jackson@mastodon.nz
+                </ColorLink>
+              </HStack>
             </HStack>
           </Stack>
         </Box>
