@@ -53,7 +53,7 @@ const Home: NextPage = () => {
         <AboutMe />
         <ShowcasedProjects />
         <Divider />
-        <Box mt={2}>
+        <Box mt={2} mb={6}>
           <ColorLink
             linkProps={{ textDecor: "none" }}
             href="https://blog.jacksonrakena.com/"
