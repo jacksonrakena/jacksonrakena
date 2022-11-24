@@ -11,7 +11,7 @@ const Footprint: NextPage = () => {
         <title>Footprint</title>
       </Head>
       <Container>
-        <Box py={6}>
+        <Box py={6} mb={6}>
           <VStack spacing={3} alignItems={"start"}>
             <Heading size={"lg"}>Digital footprint</Heading>
             <Box>
