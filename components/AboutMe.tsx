@@ -55,14 +55,7 @@ export const AboutMe = () => {
           </Stack>
         </Box>
       </Stack>
-      <Box mt={6}>
-        Programmer, writer, university student. Terminally online. <br />
-        Part of{" "}
-        <ColorLink href="https://github.com/animalswithcoolhats">
-          Animals With Cool Hats
-        </ColorLink>
-        .
-      </Box>
+      <Box mt={6}>Programmer, writer, university student.</Box>
     </Box>
   );
 };
