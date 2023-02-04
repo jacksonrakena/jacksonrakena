@@ -1,5 +1,5 @@
-👋 I'm Jackson, and I'm a student software developer from New Zealand. 🇳🇿    
-  
-I'm studying at Victoria University of Wellington.
+👋 I'm Jackson, and I'm a student software developer from New Zealand.  I'm studying at Victoria University of Wellington.
 
-I write C# and React, and I'm trying my best to learn Rust.
+My favourite tools are C#, React, Rust, and Zig. 
+
+I'm particularly proud of [Gradekeeper](https://gradekeeper.xyz), my all-in-one grade tracking site, and [abyss](https://github.com/jacksonrakena/abyss), a Discord bot with fun commands and games. 
