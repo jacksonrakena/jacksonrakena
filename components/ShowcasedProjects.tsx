@@ -31,10 +31,10 @@ const projects: ShowcasedProject[] = [
   },
   {
     id: 1,
-    name: "Abyss",
+    name: "Jacksonbot",
     description:
       "A fun chat-bot that can play blackjack and show you pictures of cats.",
-    link: "https://github.com/jacksonrakena/abyss",
+    link: "https://github.com/jacksonrakena/jacksonbot",
     icon: "https://d.lu.je/avatar/679925967153922055",
     tags: ["C#", "PostgreSQL"],
   },
