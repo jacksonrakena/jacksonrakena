@@ -2,4 +2,4 @@
 
 My favourite tools are C#, React, Rust, and Zig. 
 
-I'm particularly proud of [Gradekeeper](https://gradekeeper.xyz), my all-in-one grade tracking site, and [abyss](https://github.com/jacksonrakena/abyss), a Discord bot with fun commands and games. 
+I'm particularly proud of [Gradekeeper](https://gradekeeper.xyz), my all-in-one grade tracking site, and [Jacksonbot](https://github.com/jacksonrakena/jacksonbot), a Discord bot with fun commands and games. 
