@@ -1,4 +1,6 @@
-👋 I'm Jackson, and I'm a student software developer from New Zealand.  I'm studying at Victoria University of Wellington.
+👋 I'm Jackson, and I'm a student software developer from New Zealand.  
+
+I'm studying at Victoria University of Wellington, where I am an engineering tutor and test interpreter.
 
 My favourite tools are C#, React, Rust, and Zig. 
 
