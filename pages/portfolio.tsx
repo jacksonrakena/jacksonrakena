@@ -79,6 +79,64 @@ const work: Project[] = [
 ];
 const projects: Project[] = [
   {
+    id: 2,
+    name: "OpenModServer",
+    tags: [
+      <Tag key={0} size="sm" colorScheme={"orange"}>
+        Full-stack
+      </Tag>,
+    ],
+    arch: ["ASP.NET", "PostgreSQL"],
+    year: "2022",
+    link: "https://github.com/jacksonrakena/openmodserver",
+    content: (
+      <>
+        <Stack spacing={12}>
+          <Box>
+            <Heading size="sm">Premise</Heading>
+            OpenModServer is a web application for managing and hosting
+            modifications for popular video games. It provides an easy-to-use
+            interface for game players to download new mods for their favourite
+            games, a simple way for mod developers to upload their mods, and a
+            way for site administrators to moderate and verify submissions. It
+            is built using ASP.NET Core, with a PostgreSQL database for storing
+            user data.
+          </Box>
+          <Box>
+            <Heading size="sm">Moderation</Heading>
+            Accepting arbitrary user uploads has always been a challenge for
+            websites, and OpenModServer is no exception. To combat this,
+            OpenModServer uses a moderation system, where users can submit mods
+            for approval, and site administrators can review and approve or
+            reject them.
+            <br />
+            <br />
+            This system is built using a PostgreSQL database, with a table for
+            mods, releases, verifications, and users. In addition, OpenModServer
+            automatically submits uploads to virus-checking site VirusTotal, and
+            periodically pings VirusTotal to check if it has finished processing
+            the file. Once it has been processed, OpenModServer will show the
+            result to the site administrators in the review process.
+          </Box>
+          <Box>
+            <Heading size="sm">Challenges</Heading>
+            <ol>
+              <li>
+                Storing mod information, including the various releases, their
+                approval statuses, reasons for approval/disapproval, and
+                VirusTotal scanning status
+              </li>
+              <li>User profiles, including handling personal information</li>
+              <li>
+                Comments on mod listings, including pinned and deleting comments
+              </li>
+            </ol>
+          </Box>
+        </Stack>
+      </>
+    ),
+  },
+  {
     id: 0,
     name: "Gradekeeper",
     description:
@@ -127,7 +185,7 @@ const projects: Project[] = [
     ),
   },
   {
-    id: 2,
+    id: 3,
     name: "StreamApps",
     description: "Power up your stream with powerful tools for $5/month.",
     link: "https://streamapps.live",
@@ -195,34 +253,34 @@ const pb: Project[] = [
     ),
   },
 
-  {
-    id: 1,
-    name: "animalswithcoolhats.com",
-    description: "Your number #1 source for animals with cool hats.",
-    link: "https://animalswithcoolhats.com",
-    year: "2021",
-    arch: [".NET", "Postgres"],
-    tags: [
-      <Tag key={0} size="sm" colorScheme={"purple"}>
-        Server-side
-      </Tag>,
-    ],
-    content: (
-      <>
-        <Stack spacing={8}>
-          <Text>
-            animalswithcoolhats.com is a novelty website providing a endless
-            rotating stream of pictures of animals wearing cool hats.
-          </Text>
-          <Text>
-            A frequently asked question is &quot;what qualifies a hat as being
-            cool?&quot;
-          </Text>
-          <Text>They all are.</Text>
-        </Stack>
-      </>
-    ),
-  },
+  // {
+  //   id: 1,
+  //   name: "animalswithcoolhats.com",
+  //   description: "Your number #1 source for animals with cool hats.",
+  //   link: "https://animalswithcoolhats.com",
+  //   year: "2021",
+  //   arch: [".NET", "Postgres"],
+  //   tags: [
+  //     <Tag key={0} size="sm" colorScheme={"purple"}>
+  //       Server-side
+  //     </Tag>,
+  //   ],
+  //   content: (
+  //     <>
+  //       <Stack spacing={8}>
+  //         <Text>
+  //           animalswithcoolhats.com is a novelty website providing a endless
+  //           rotating stream of pictures of animals wearing cool hats.
+  //         </Text>
+  //         <Text>
+  //           A frequently asked question is &quot;what qualifies a hat as being
+  //           cool?&quot;
+  //         </Text>
+  //         <Text>They all are.</Text>
+  //       </Stack>
+  //     </>
+  //   ),
+  // },
 ];
 
 const ProjectTab = React.forwardRef(function ProjectTabUnreffed(
@@ -320,19 +378,16 @@ const Home: NextPage = () => {
               interest in new and emerging frameworks and languages.
             </Box>
             <Box>
-              I have 3 years of experience in React and frontend engineering. I
-              am working towards the <b>AWS Certified Solutions Architect</b>{" "}
-              certificate.
+              I have 3 years of professional experience in React and frontend
+              engineering. I have many years of hobby experience in backend
+              programming, especially with ASP.NET and C#.
             </Box>
             <Box>
-              I am currently a <b>Software &amp; Cloud Engineer</b> at GoCloud
-              Systems, a Wellington-based software consultancy and managed
-              services provider.
-            </Box>
-            <Box>
-              I am in my first year of study for a{" "}
-              <b>Bachelor of Engineering (Honours)</b> in{" "}
+              I am studying for a <b>Bachelor of Engineering (Honours)</b> in{" "}
               <b>Software Engineering</b> at Victoria University of Wellington.
+            </Box>
+            <Box>
+              At the moment, I&apos;m learning <b>Rust</b>.
             </Box>
           </Stack>
         </Box>
