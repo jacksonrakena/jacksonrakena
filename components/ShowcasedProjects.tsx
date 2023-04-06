@@ -36,7 +36,7 @@ const projects: ShowcasedProject[] = [
       "A fun chat-bot that can play blackjack and show you pictures of cats.",
     link: "https://github.com/jacksonrakena/jacksonbot",
     icon: "https://d.lu.je/avatar/679925967153922055",
-    tags: ["C#", "PostgreSQL"],
+    tags: ["Rust", "Diesel", "PostgreSQL"],
   },
   {
     id: 2,
