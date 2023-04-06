@@ -37,19 +37,19 @@ export const AboutMe = () => {
             <HStack spacing={2} alignItems={"center"}>
               <Icon w={5} h={5} as={FiMail} />
               <ColorLink href="mailto:jackson@animalswithcoolhats.com">
-                jackson@animalswithcoolhats.com
+                jackson@rakena.co.nz
               </ColorLink>
             </HStack>
             <HStack spacing={2} alignItems={"center"}>
               <Icon w={5} h={5} as={BsTwitter} />
               <HStack spacing={1}>
-                <ColorLink href="https://twitter.com/abyssalnwx">
-                  @abyssalnwx
+                <ColorLink href="https://twitter.com/nwxjackson">
+                  @nwxjackson
                 </ColorLink>
-                <Box>&bull;</Box>
+                {/* <Box>&bull;</Box>
                 <ColorLink href="https://mastodon.nz/@jackson">
                   @jackson@mastodon.nz
-                </ColorLink>
+                </ColorLink> */}
               </HStack>
             </HStack>
           </Stack>

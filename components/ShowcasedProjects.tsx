@@ -40,13 +40,21 @@ const projects: ShowcasedProject[] = [
   },
   {
     id: 2,
-    name: "Project Spork",
-    description:
-      "Data analysis and visualization for New Zealand's House of Representatives.",
-    link: "https://github.com/jacksonrakena/spork",
-    icon: "/assets/spork.svg",
-    tags: ["Rust", "React", "Data Analysis"],
+    name: "OpenModServer",
+    description: "An open-source, multi-game mod/plug-in and community server.",
+    link: "https://github.com/jacksonrakena/openmodserver",
+    icon: "/assets/oms.png",
+    tags: ["ASP.NET", "Backend", "Integration"],
   },
+  // {
+  //   id: 2,
+  //   name: "Project Spork",
+  //   description:
+  //     "Data analysis and visualization for New Zealand's House of Representatives.",
+  //   link: "https://github.com/jacksonrakena/spork",
+  //   icon: "/assets/spork.svg",
+  //   tags: ["Rust", "React", "Data Analysis"],
+  // },
 ];
 
 export const ShowcasedProjects = () => {
@@ -98,7 +106,11 @@ export const ShowcasedProjects = () => {
               </Box>
               {project.icon && (
                 <Box>
-                  <Avatar name={project.icon} src={project.icon} />
+                  <Avatar
+                    background={"white"}
+                    name={project.icon}
+                    src={project.icon}
+                  />
                 </Box>
               )}
             </HStack>
