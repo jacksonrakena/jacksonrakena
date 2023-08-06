@@ -58,8 +58,28 @@ const work: Project[] = [
     ],
     content: (
       <>
+        In 2022, I led the development of a React-based call center solution
+        using Amazon Connect that was deployed nationally to Plunket’s at-home
+        care service. This solution involved 4 repositories, 30,000 lines of
+        code, and over 100 total AWS resources organized with CloudFormation and
+        remains the proudest piece of work in my career.
+        <br />
+        <br />
         PlunketLine is a free, 24/7/365 helpline for new parents, providing
-        medical information and assistance to those who need it most.
+        medical information and assistance to those who need it most. 24 hours a
+        day, 365 days a year, thousands of nurses from across the Plunket
+        organisation log on to their computers and answer calls from concerned
+        parents and caregivers across New Zealand. <br />
+        <br />
+        Our system needed to never miss a beat and be super simple to use for
+        customers, and our engineering work and design delivered a product that
+        meets every need for Plunket.
+        <br />
+        <br />
+        We also handled the transition from a legacy on-premise call center
+        solution to our cloud-based solution built on top of Amazon Connect,
+        including porting numbers, creating documentation training staff, and
+        ensuring that the transition was as smooth as possible.
       </>
     ),
   },
@@ -74,10 +94,73 @@ const work: Project[] = [
         AWS
       </Tag>,
     ],
-    content: <></>,
+    content: (
+      <>
+        The Visitor App was a React-based app connected to a DynamoDB database
+        using AWS Lambda, that handled visitor induction and safety paperwork
+        for hundreds of visitors entering Garage Project sites every day across
+        Wellington.
+        <br />
+        <br />I engineered the application{"'"}s structure to support both
+        Google and Microsoft (MSAL) systems, so that a staff member was alerted
+        and sent the filled-in paperwork when a visitor completed the form.
+        <br />
+        <br /> I also pushed for the system design to be fully generic and
+        turn-key, so that our company could, within a day, deploy this system to
+        a new client with minimal configuration and zero code changes.
+      </>
+    ),
   },
 ];
 const projects: Project[] = [
+  {
+    id: 0,
+    name: "Gradekeeper",
+    description:
+      "The best way for university students to track their course progress.",
+    link: "https://gradekeeper.xyz",
+    year: "2022",
+    arch: ["Next.js", "Prisma", "MySQL"],
+    tags: [
+      <Tag key={0} size="sm" colorScheme={"orange"}>
+        Full-stack
+      </Tag>,
+    ],
+    content: (
+      <>
+        <Stack spacing={12}>
+          <Box>
+            <Heading size="sm">Premise</Heading>
+            Gradekeeper is a free and easy-to-use website and Progressive Web
+            App (PWA) that allows university students to track their course
+            progress.
+            <br />
+            <br />
+            It provides helpful information about average grades, grades needed
+            to reach a certain goal, and projected grades, based on what
+            they&apos;ve already achieved.
+          </Box>
+          <Box>
+            <Heading size="sm">Infrastructure</Heading>
+            Gradekeeper is a Next.js app, using React and Chakra UI on the
+            frontend, with Prisma ORM connected to a PlanetScale MySQL database
+            for storing user data. It uses Google for authentication and account
+            management.
+          </Box>
+          <Box>
+            <Heading size="sm">Challenges</Heading>
+            <ol>
+              <li>
+                Storing course information, including lots of nested data, in a
+                relational database
+              </li>
+              <li>Calculating a projected grade for each course</li>
+            </ol>
+          </Box>
+        </Stack>
+      </>
+    ),
+  },
   {
     id: 2,
     name: "OpenModServer",
@@ -137,58 +220,10 @@ const projects: Project[] = [
     ),
   },
   {
-    id: 0,
-    name: "Gradekeeper",
-    description:
-      "The best way for university students to track their course progress.",
-    link: "https://gradekeeper.xyz",
-    year: "2022",
-    arch: ["Next.js", "Prisma", "MySQL"],
-    tags: [
-      <Tag key={0} size="sm" colorScheme={"orange"}>
-        Full-stack
-      </Tag>,
-    ],
-    content: (
-      <>
-        <Stack spacing={12}>
-          <Box>
-            <Heading size="sm">Premise</Heading>
-            Gradekeeper is a free and easy-to-use website and Progressive Web
-            App (PWA) that allows university students to track their course
-            progress.
-            <br />
-            <br />
-            It provides helpful information about average grades, grades needed
-            to reach a certain goal, and projected grades, based on what
-            they&apos;ve already achieved.
-          </Box>
-          <Box>
-            <Heading size="sm">Infrastructure</Heading>
-            Gradekeeper is a Next.js app, using React and Chakra UI on the
-            frontend, with Prisma ORM connected to a PlanetScale MySQL database
-            for storing user data. It uses Google for authentication and account
-            management.
-          </Box>
-          <Box>
-            <Heading size="sm">Challenges</Heading>
-            <ol>
-              <li>
-                Storing course information, including lots of nested data, in a
-                relational database
-              </li>
-              <li>Calculating a projected grade for each course</li>
-            </ol>
-          </Box>
-        </Stack>
-      </>
-    ),
-  },
-  {
     id: 3,
     name: "StreamApps",
     description: "Power up your stream with powerful tools for $5/month.",
-    link: "https://streamapps.live",
+    link: undefined,
     year: "2020",
     arch: ["Elixir", "Phoenix"],
     tags: [
@@ -374,20 +409,29 @@ const Home: NextPage = () => {
           </Stack>
           <Stack spacing={6} mt={6}>
             <Box>
-              I&apos;m a full-stack New Zealand software engineer with an
-              interest in new and emerging frameworks and languages.
+              I am a driven, experienced engineer and university student. I have
+              2 years of professional, salaried experience in front-end
+              technologies and Amazon Web Services, including interacting with
+              clients, writing documentation, managing product delivery, and
+              assembling technology stacks.
             </Box>
             <Box>
-              I have 3 years of professional experience in React and frontend
-              engineering. I have many years of hobby experience in backend
-              programming, especially with ASP.NET and C#.
+              I would consider myself an expert in C#, JavaScript, React, Java,
+              and Python. I have an interest in the study of programming
+              language theory and the development of new programming
+              technologies.
             </Box>
             <Box>
-              I am studying for a <b>Bachelor of Engineering (Honours)</b> in{" "}
-              <b>Software Engineering</b> at Victoria University of Wellington.
+              On my GitHub are 82 public repositories detailing my experience
+              and practice in a wide variety of established and emerging
+              technologies. Recently I have been learning Rust, with my first
+              large practice project being an online programming quiz site.
             </Box>
             <Box>
-              At the moment, I&apos;m learning <b>Rust</b>.
+              I am studying for a <b>Bachelor of Science</b> in{" "}
+              <b>Computer Science</b> at Victoria University of Wellington. I
+              expect to finish my courses at the end of 2024, and I am looking
+              for graduate roles in 2025 and beyond.
             </Box>
           </Stack>
         </Box>

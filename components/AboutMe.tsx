@@ -7,6 +7,7 @@ import {
   Icon,
   Spacer,
   Stack,
+  VStack,
 } from "@chakra-ui/react";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
@@ -22,7 +23,13 @@ export const AboutMe = () => {
               src={"https://avatars.githubusercontent.com/u/44521335?v=4"}
               name={"Jackson Rakena"}
             />
-            <Heading>Jackson Rakena</Heading>
+            <VStack alignItems={"start"}>
+              {" "}
+              <Heading marginBottom={0} paddingBottom={0}>
+                Jackson Rakena
+              </Heading>
+              <Box marginTop={0}>Programmer, writer, university student.</Box>
+            </VStack>
           </HStack>
           <Spacer />
         </Flex>
