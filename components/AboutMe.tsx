@@ -28,7 +28,6 @@ export const AboutMe = () => {
               <Heading marginBottom={0} paddingBottom={0}>
                 Jackson Rakena
               </Heading>
-              <Box marginTop={0}>Programmer, writer, university student.</Box>
             </VStack>
           </HStack>
           <Spacer />
