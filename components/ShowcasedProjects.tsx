@@ -44,19 +44,10 @@ const projects: ShowcasedProject[] = [
     name: "Ace In The Hole",
     description:
       "Multiplayer 3D casino game with Texas hold 'em poker and blackjack.",
-    link: "https://github.com/jacksonrakena/openmodserver",
+    link: "https://github.com/jacksonrakena/ace-in-the-hole",
     icon: "/assets/aith.jpg",
     tags: ["Unity", "Networking", "C#"],
   },
-  // {
-  //   id: 2,
-  //   name: "Project Spork",
-  //   description:
-  //     "Data analysis and visualization for New Zealand's House of Representatives.",
-  //   link: "https://github.com/jacksonrakena/spork",
-  //   icon: "/assets/spork.svg",
-  //   tags: ["Rust", "React", "Data Analysis"],
-  // },
 ];
 
 export const ShowcasedProjects = () => {
