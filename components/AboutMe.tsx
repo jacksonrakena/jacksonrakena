@@ -42,7 +42,7 @@ export const AboutMe = () => {
             </HStack>
             <HStack spacing={2} alignItems={"center"}>
               <Icon w={5} h={5} as={FiMail} />
-              <ColorLink href="mailto:jackson@animalswithcoolhats.com">
+              <ColorLink href="mailto:jackson@rakena.co.nz">
                 jackson@rakena.co.nz
               </ColorLink>
             </HStack>
