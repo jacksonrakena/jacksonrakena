@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Link as CLink } from "@chakra-ui/react";
+import { Box, Link as CLink, Container, Divider } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
             linkProps={{ textDecor: "none" }}
             href="https://blog.jacksonrakena.com/"
           >
-            My blog
+            Blog
           </ColorLink>{" "}
           &bull;{" "}
           <ColorLink
@@ -73,10 +73,6 @@ const Home: NextPage = () => {
             href="https://redirects.jacksonrakena.com/discord"
           >
             My Discord server
-          </ColorLink>{" "}
-          &bull;{" "}
-          <ColorLink linkProps={{ textDecor: "none" }} href="/footprint">
-            Footprint
           </ColorLink>
         </Box>
       </Container>
