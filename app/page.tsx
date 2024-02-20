@@ -11,7 +11,6 @@ export default function HomePage() {
       <ShowcasedProjects />
       <Divider />
       <Box mt={6} mb={6}>
-        <BoldLink href="https://blog.jacksonrakena.com/">Blog</BoldLink> &bull;{" "}
         <BoldLink href="https://status.rakena.co.nz/">Service status</BoldLink>{" "}
         &bull;{" "}
         <BoldLink href="https://redirects.jacksonrakena.com/discord">
