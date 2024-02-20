@@ -5,33 +5,24 @@ import {
   Heading,
   HStack,
   Icon,
-  Spacer,
   Stack,
   VStack,
 } from "@chakra-ui/react";
-import { BsGithub, BsTwitter } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { ColorLink } from "../pages";
 
 export const AboutMe = () => {
   return (
-    <Box py={6}>
-      <Stack spacing={2}>
-        <Flex>
-          <HStack spacing={2}>
-            <Avatar
-              src={"https://avatars.githubusercontent.com/u/44521335?v=4"}
-              name={"Jackson Rakena"}
-            />
-            <VStack alignItems={"start"}>
-              {" "}
-              <Heading marginBottom={0} paddingBottom={0}>
-                Jackson Rakena
-              </Heading>
-            </VStack>
-          </HStack>
-          <Spacer />
-        </Flex>
+    <Flex py={16} alignItems={"center"} justifyContent={"space-between"}>
+      <VStack alignItems={"start"}>
+        {" "}
+        <Box mb={4}>
+          <Heading fontWeight={"extrabold"} marginBottom={0} paddingBottom={0}>
+            Jackson Rakena
+          </Heading>
+          <Box>Programmer, writer, university student.</Box>
+        </Box>
         <Box fontSize={["sm", "md", "lg"]}>
           <Stack spacing={1}>
             <HStack spacing={2} alignItems={"center"}>
@@ -46,22 +37,14 @@ export const AboutMe = () => {
                 jackson@rakena.co.nz
               </ColorLink>
             </HStack>
-            <HStack spacing={2} alignItems={"center"}>
-              <Icon w={5} h={5} as={BsTwitter} />
-              <HStack spacing={1}>
-                <ColorLink href="https://twitter.com/jacksonfrfr">
-                  @jacksonfrfr
-                </ColorLink>
-                {/* <Box>&bull;</Box>
-                <ColorLink href="https://mastodon.nz/@jackson">
-                  @jackson@mastodon.nz
-                </ColorLink> */}
-              </HStack>
-            </HStack>
           </Stack>
         </Box>
-      </Stack>
-      <Box mt={6}>Programmer, writer, university student.</Box>
-    </Box>
+      </VStack>
+      <Avatar
+        src={"https://avatars.githubusercontent.com/u/44521335?v=4"}
+        size={["xl", "2xl"]}
+        name={"Jackson Rakena"}
+      />
+    </Flex>
   );
 };

@@ -1,20 +1,10 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider
-      theme={extendTheme({
-        fonts: {
-          heading: "Inter",
-          body: "Inter",
-        },
-        initialColorMode: "light",
-        useSystemColorMode: false,
-        colors,
-      })}
-    >
+    <ChakraProvider>
       <Head>
         {" "}
         <meta

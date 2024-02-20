@@ -31,9 +31,7 @@ export const ColorLink = (props: {
   return (
     <CLink
       href={props.href}
-      textDecor={"underline"}
-      color="primary.500"
-      _hover={{ color: "primary.700" }}
+      _hover={{ color: "primary.700", textDecor: "underline" }}
       target="_blank"
       rel="noreferrer"
       {...props.linkProps}

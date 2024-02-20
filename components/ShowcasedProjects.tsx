@@ -53,7 +53,7 @@ const projects: ShowcasedProject[] = [
 export const ShowcasedProjects = () => {
   return (
     <>
-      <Flex py={4} flexDirection={"column"}>
+      <Flex flexDirection={"column"}>
         {projects
           .toSorted((a, b) => a.id - b.id)
           .map((project) => (
@@ -63,7 +63,7 @@ export const ShowcasedProjects = () => {
                 alignItems={"center"}
                 p={4}
                 _hover={{
-                  borderColor: "primary.400",
+                  borderColor: "gray.400",
                 }}
                 transition={"0.2s"}
                 key={project.id}
@@ -92,7 +92,7 @@ export const ShowcasedProjects = () => {
                   <Text>{project.description}</Text>
                   <HStack mt={2}>
                     {project.tags?.map((t) => (
-                      <Tag colorScheme={"primary"} key={t} size="sm">
+                      <Tag colorScheme={"gray"} key={t} size="sm">
                         {t}
                       </Tag>
                     ))}
