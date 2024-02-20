@@ -5,7 +5,10 @@ import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Jackson Rakena",
-  description: "Software engineer",
+  description: "Full-stack software engineer with 2+ years of experience",
+  twitter: {
+    images: ["https://avatars.githubusercontent.com/u/44521335?v=4"],
+  },
 };
 
 export const viewport: Viewport = {
