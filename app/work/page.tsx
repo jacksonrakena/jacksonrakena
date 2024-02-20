@@ -1,7 +1,8 @@
-import { Box, Flex, Heading, Icon, Link, Stack, Text } from "@chakra-ui/react";
-import type { NextPage } from "next";
-import Head from "next/head";
+"use client";
+
+import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { BoldLink } from "../../components/BoldLink";
 interface Project {
   id: number;
   name: string;
@@ -138,12 +139,9 @@ const work: Project[] = [
   },
 ];
 
-const Work: NextPage = () => {
+export default function Work() {
   return (
     <Box textAlign={"justify"}>
-      <Head>
-        <title>Jackson Rakena</title>
-      </Head>
       <Stack spacing={8}>
         <Heading fontWeight={""}>my work</Heading>
         <Stack spacing={6}>
@@ -161,12 +159,12 @@ const Work: NextPage = () => {
           <Box key={i} my={8}>
             <Stack mb={6}>
               {commercial.link ? (
-                <Link target="_blank" rel="noreferrer" href={commercial.link}>
+                <BoldLink isExternal href={commercial.link}>
                   <Heading size="md" fontWeight={""}>
                     {commercial.name}
                     <Icon ml={2} boxSize={3} as={FaExternalLinkAlt} />
                   </Heading>
-                </Link>
+                </BoldLink>
               ) : (
                 <Heading size="md" fontWeight={""}>
                   {commercial.name}
@@ -189,6 +187,4 @@ const Work: NextPage = () => {
       </Box>
     </Box>
   );
-};
-
-export default Work;
+}

@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
-import { ColorLink } from "../pages";
+import { BoldLink } from "./BoldLink";
 
 export const AboutMe = () => {
   return (
@@ -25,15 +25,15 @@ export const AboutMe = () => {
           <Stack spacing={1}>
             <HStack spacing={2} alignItems={"center"}>
               <Icon w={5} h={5} as={BsGithub} />
-              <ColorLink href="https://github.com/jacksonrakena">
+              <BoldLink href="https://github.com/jacksonrakena">
                 jacksonrakena
-              </ColorLink>
+              </BoldLink>
             </HStack>
             <HStack spacing={2} alignItems={"center"}>
               <Icon w={5} h={5} as={FiMail} />
-              <ColorLink href="mailto:jackson@rakena.co.nz">
+              <BoldLink href="mailto:jackson@rakena.co.nz">
                 jackson@rakena.co.nz
-              </ColorLink>
+              </BoldLink>
             </HStack>
           </Stack>
         </Box>
