@@ -33,7 +33,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Box my={12}>
           <HStack spacing={6}>
             {routes.map((route) => (
-              <NextLink href={route.to} passHref>
+              <NextLink
+                href={route.to}
+                passHref
+                {...(route.to.startsWith("http")
+                  ? { target: "_blank", rel: "noreferrer" }
+                  : {})}
+              >
                 <Link
                   _hover={{
                     fontWeight: "extrabold",

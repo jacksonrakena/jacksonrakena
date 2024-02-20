@@ -26,15 +26,17 @@ const work: Project[] = [
         remains the proudest piece of work in my career.
         <br />
         <br />
-        PlunketLine is a free, 24/7/365 helpline for new parents, providing
-        medical information and assistance to those who need it most. 24 hours a
-        day, 365 days a year, thousands of nurses from across the Plunket
-        organisation log on to their computers and answer calls from concerned
-        parents and caregivers across New Zealand. <br />
+        My team engineered a solution that never missed a beat &mdash; 24 hours
+        a day, 7 days a week, 365 days a year &mdash; so Plunket nurses can
+        never miss a call from a concerned mother caring for her child. As you
+        read this, a nurse will be using our solution to pick-up a call,
+        escalate, or schedule an appointment with a mother.
         <br />
-        Our system needed to never miss a beat and be super simple to use for
-        customers, and our engineering work and design delivered a product that
-        meets every need for Plunket.
+        <br />
+        Thousands of engineer hours went into scrutinizing every detail &mdash;
+        flows, buttons, actions, text &mdash; to ensure it was super simple to
+        use for customers, and we delivered a product that meets every need for
+        Plunket.
         <br />
         <br />
         We also handled the transition from a legacy on-premise call center
@@ -109,7 +111,7 @@ const work: Project[] = [
   {
     id: 3,
     name: "StreamApps",
-    role: "Technology lead",
+    role: "Engineering chief",
     link: undefined,
     tech: "Elixir / Phoenix",
     content: (
@@ -126,6 +128,9 @@ const work: Project[] = [
             utilities that perform different functions, but one of note is the{" "}
             <em>Engagement Counters</em>, which show the number of Twitter
             followers, Facebook likes, and other social media stats on a stream.
+            <br />
+            <br />I lead the technology & engineering side of StreamApps
+            Limited, with two friends taking up the management and sales roles.
           </Text>
         </Stack>
       </>
