@@ -8,13 +8,6 @@ export default class Document extends NextDocument {
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
         <body>
-          <a
-            style={{ display: "none" }}
-            rel="me"
-            href="https://mastodon.nz/@jackson"
-          >
-            Mastodon
-          </a>
           <Main />
           <NextScript />
         </body>

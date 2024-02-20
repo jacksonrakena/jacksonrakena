@@ -14,13 +14,11 @@ import { ColorLink } from "../pages";
 
 export const AboutMe = () => {
   return (
-    <Flex py={16} alignItems={"center"} justifyContent={"space-between"}>
+    <Flex pb={16} alignItems={"center"} justifyContent={"space-between"}>
       <VStack alignItems={"start"}>
         {" "}
         <Box mb={4}>
-          <Heading fontWeight={"extrabold"} marginBottom={0} paddingBottom={0}>
-            Jackson Rakena
-          </Heading>
+          <Heading fontWeight={"extrabold"}>Jackson Rakena</Heading>
           <Box>Programmer, writer, university student.</Box>
         </Box>
         <Box fontSize={["sm", "md", "lg"]}>

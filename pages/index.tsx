@@ -1,4 +1,4 @@
-import { Box, Link as CLink, Container, Divider } from "@chakra-ui/react";
+import { Box, Link as CLink, Divider } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -47,33 +47,31 @@ const Home: NextPage = () => {
       <Head>
         <title>Jackson Rakena</title>
       </Head>
-      <Container>
-        <AboutMe />
-        <ShowcasedProjects />
-        <Divider />
-        <Box mt={6} mb={6}>
-          <ColorLink
-            linkProps={{ textDecor: "none" }}
-            href="https://blog.jacksonrakena.com/"
-          >
-            Blog
-          </ColorLink>{" "}
-          &bull;{" "}
-          <ColorLink
-            linkProps={{ textDecor: "none" }}
-            href="https://status.rakena.co.nz/"
-          >
-            Service status
-          </ColorLink>{" "}
-          &bull;{" "}
-          <ColorLink
-            linkProps={{ textDecor: "none" }}
-            href="https://redirects.jacksonrakena.com/discord"
-          >
-            My Discord server
-          </ColorLink>
-        </Box>
-      </Container>
+      <AboutMe />
+      <ShowcasedProjects />
+      <Divider />
+      <Box mt={6} mb={6}>
+        <ColorLink
+          linkProps={{ textDecor: "none" }}
+          href="https://blog.jacksonrakena.com/"
+        >
+          Blog
+        </ColorLink>{" "}
+        &bull;{" "}
+        <ColorLink
+          linkProps={{ textDecor: "none" }}
+          href="https://status.rakena.co.nz/"
+        >
+          Service status
+        </ColorLink>{" "}
+        &bull;{" "}
+        <ColorLink
+          linkProps={{ textDecor: "none" }}
+          href="https://redirects.jacksonrakena.com/discord"
+        >
+          My Discord server
+        </ColorLink>
+      </Box>
     </div>
   );
 };

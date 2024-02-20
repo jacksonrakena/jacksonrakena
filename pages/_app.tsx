@@ -1,8 +1,25 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider, Container, HStack, Link } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const routes = [
+    {
+      name: "Home",
+      to: "/",
+    },
+    {
+      name: "Work",
+      to: "/work",
+    },
+    {
+      name: "Blog",
+      to: "https://blog.jacksonrakena.com/",
+    },
+  ];
   return (
     <ChakraProvider>
       <Head>
@@ -12,7 +29,25 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, minimum-scale=1"
         />
       </Head>
-      <Component {...pageProps} />
+      <Container maxW="container.sm">
+        <Box my={12}>
+          <HStack spacing={6}>
+            {routes.map((route) => (
+              <NextLink href={route.to} passHref>
+                <Link
+                  _hover={{
+                    fontWeight: "extrabold",
+                  }}
+                  fontWeight={router.pathname === route.to ? "extrabold" : ""}
+                >
+                  {route.name.toLowerCase()}
+                </Link>
+              </NextLink>
+            ))}
+          </HStack>
+        </Box>
+        <Component {...pageProps} />
+      </Container>
     </ChakraProvider>
   );
 }
