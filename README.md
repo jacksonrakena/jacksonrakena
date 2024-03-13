@@ -7,7 +7,7 @@ I have two years of commercial software engineering experience, including at [Se
 
 I am the creator of [Gradekeeper](https://gradekeeper.xyz), a grade tracking site used by 500+ university students at 15+ universities and colleges around the world. I also work on a multiplayer, friendly casino game called [Ace In The Hole](https://github.com/jacksonrakena/ace-in-the-hole) that's a ton of fun, and a home-grown low-level C# networking library called [Promul](https://github.com/jacksonrakena/promul) to support it.
 
-### What I've been working on recently
+#### What I've been working on recently
 - [Gradekeeper](https://gradekeeper.xyz), a grade-tracking site used by 500+ students
 - [Jacksonbot](https://github.com/jacksonrakena/jacksonbot), a Discord bot with games and tricks used by over 60,000 users
 - [Moodbored](https://github.com/jacksonrakena/moodbored), a mood-tracking site that helps users take control of their life
