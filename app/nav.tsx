@@ -13,11 +13,11 @@ export const Nav = () => {
     {
       name: "Work",
       to: "/work",
-    },
+    }/*,
     {
       name: "Blog",
       to: "https://blog.jacksonrakena.com/",
-    },
+    },*/
   ];
   const pathname = usePathname();
   return (
