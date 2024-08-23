@@ -22,7 +22,8 @@ const work: Project[] = [
       <>
         <Stack spacing={12}>
           <Box>
-            Used by 500+ users at 15+ universities and colleges across the world
+            Serves over 500 students every day at 15+ universities and colleges
+            across the world
             <br />
             <br />
             Gradekeeper is a free and easy-to-use website and Progressive Web
@@ -146,10 +147,12 @@ export default function Work() {
         <Heading fontWeight={""}>my work</Heading>
         <Stack spacing={6}>
           <Box>
-            I am driven by a relentless need to tinker, destroy, fiddle with,
-            create, explore &mdash; to seek out what has yet to be made, and
-            show it to the world. Here's a quick overview of what I'm proud to
-            have made so far.
+            This page is a small overview of the proudest work in my career. If
+            you want to get in touch to learn more, email me at{" "}
+            <BoldLink href="mailto:hi@jacksonrakena.com">
+              hi@jacksonrakena.com
+            </BoldLink>
+            .
           </Box>
         </Stack>
         <hr />

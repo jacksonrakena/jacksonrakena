@@ -10,10 +10,10 @@ export default function HomePage() {
       <AboutMe />
       <ShowcasedProjects />
       <Divider />
-      <Box mt={6} mb={6}>
+      <Box mt={6} mb={12}>
         <BoldLink href="https://status.rakena.co.nz/">Service status</BoldLink>{" "}
         &bull;{" "}
-        <BoldLink href="https://redirects.jacksonrakena.com/discord">
+        <BoldLink href="https://jackson.url.lol/discord">
           My Discord server
         </BoldLink>
       </Box>

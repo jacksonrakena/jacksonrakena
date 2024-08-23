@@ -6,6 +6,7 @@ import {
   HStack,
   LinkBox,
   LinkOverlay,
+  Stack,
   Tag,
   Text,
 } from "@chakra-ui/react";
@@ -27,14 +28,14 @@ const projects: ShowcasedProject[] = [
     description:
       "The all-in-one course and grade management app, used by 500+ students at 15+ universities across the world",
     link: "https://gradekeeper.xyz",
-    icon: "https://app.gradekeeper.xyz/android-chrome-512x512.png",
+    icon: "https://app.gradekeeper.xyz/icons/android-chrome-512x512.png",
     tags: ["Next.js", "Prisma", "MySQL"],
   },
   {
     id: 2,
     name: "Jacksonbot",
     description:
-      "A fun chat-bot that can play blackjack and show you pictures of cats.",
+      "A Discord chat-bot that can play blackjack and show you pictures of cats. Serves over 50,000 users.",
     link: "https://github.com/jacksonrakena/jacksonbot",
     icon: "https://d.lu.je/avatar/679925967153922055",
     tags: ["Rust", "Diesel", "PostgreSQL"],
@@ -43,9 +44,9 @@ const projects: ShowcasedProject[] = [
     id: 1,
     name: "Ace In The Hole",
     description:
-      "Multiplayer 3D casino game with Texas hold 'em poker and blackjack.",
+      "An online, multiplayer casino game with Texas Hold 'Em poker, blackjack, and 3-card poker.",
     link: "https://github.com/jacksonrakena/ace-in-the-hole",
-    icon: "/assets/aith.jpg",
+    icon: "/assets/king_spades_white.png",
     tags: ["Unity", "Networking", "C#"],
   },
 ];
@@ -53,64 +54,67 @@ const projects: ShowcasedProject[] = [
 export const ShowcasedProjects = () => {
   return (
     <>
-      <Flex flexDirection={"column"}>
-        {projects
-          .toSorted((a, b) => a.id - b.id)
-          .map((project) => (
-            <LinkBox key={project.id} mb={4} w={"100%"}>
-              <HStack
-                spacing={2}
-                alignItems={"center"}
-                p={4}
-                _hover={{
-                  borderColor: "gray.400",
-                }}
-                transition={"0.2s"}
-                key={project.id}
-                direction={"row"}
-                borderWidth={"1px"}
-                rounded={"lg"}
-              >
-                <Box>
-                  <LinkOverlay
-                    target="_blank"
-                    rel="noreferrer"
-                    href={project.link}
-                  >
-                    <Heading size="sm">
-                      {project.name}
-                      <Text
-                        fontWeight={"normal"}
-                        display={"inline"}
-                        color="GrayText"
-                      >
-                        {" "}
-                        {project.hint}
-                      </Text>
-                    </Heading>
-                  </LinkOverlay>
-                  <Text>{project.description}</Text>
-                  <HStack mt={2}>
-                    {project.tags?.map((t) => (
-                      <Tag colorScheme={"gray"} key={t} size="sm">
-                        {t}
-                      </Tag>
-                    ))}
-                  </HStack>
-                </Box>
-                {project.icon && (
+      <Stack spacing={4} alignItems={"baseline"}>
+        <Heading size="md">Some stuff I've made</Heading>
+        <Flex flexDirection={"column"}>
+          {projects
+            .toSorted((a, b) => a.id - b.id)
+            .map((project) => (
+              <LinkBox key={project.id} mb={4} w={"100%"}>
+                <HStack
+                  spacing={2}
+                  alignItems={"center"}
+                  p={4}
+                  _hover={{
+                    borderColor: "gray.400",
+                  }}
+                  transition={"0.2s"}
+                  key={project.id}
+                  direction={"row"}
+                  borderWidth={"1px"}
+                  rounded={"lg"}
+                >
                   <Box>
-                    <Avatar
-                      background={"white"}
-                      name={project.icon}
-                      src={project.icon}
-                    />
+                    <LinkOverlay
+                      target="_blank"
+                      rel="noreferrer"
+                      href={project.link}
+                    >
+                      <Heading size="sm">
+                        {project.name}
+                        <Text
+                          fontWeight={"normal"}
+                          display={"inline"}
+                          color="GrayText"
+                        >
+                          {" "}
+                          {project.hint}
+                        </Text>
+                      </Heading>
+                    </LinkOverlay>
+                    <Text>{project.description}</Text>
+                    <HStack mt={2}>
+                      {project.tags?.map((t) => (
+                        <Tag colorScheme={"gray"} key={t} size="sm">
+                          {t}
+                        </Tag>
+                      ))}
+                    </HStack>
                   </Box>
-                )}
-              </HStack>
-            </LinkBox>
-          ))}
-      </Flex>
+                  {project.icon && (
+                    <Box>
+                      <Avatar
+                        background={"white"}
+                        name={project.icon}
+                        src={project.icon}
+                      />
+                    </Box>
+                  )}
+                </HStack>
+              </LinkBox>
+            ))}
+        </Flex>
+      </Stack>
     </>
   );
 };
