@@ -1,12 +1,24 @@
 "use client";
 
-import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { BoldLink } from "../../components/BoldLink";
 interface Project {
   id: number;
   name: string;
-  role?: string;
+  role?: string | JSX.Element;
   tech?: string;
   link?: string;
   content?: JSX.Element;
@@ -16,7 +28,7 @@ const work: Project[] = [
     id: 2,
     name: "Gradekeeper",
     link: "https://gradekeeper.xyz",
-    role: "Personal project",
+    role: <>Personal project &bull; 500+ users/15+ universities</>,
     tech: "Next.js / Rust",
     content: (
       <>
@@ -56,7 +68,7 @@ const work: Project[] = [
   {
     id: 0,
     name: "GoCloud Connect — Whānau Āwhina Plunket",
-    role: "Lead frontend engineer",
+    role: "Nationwide cloud call center system rollout",
     tech: "React / AWS",
     link: "https://www.plunket.org.nz/plunket/what-we-offer/plunketline/",
     content: (
@@ -155,39 +167,55 @@ export default function Work() {
             .
           </Box>
         </Stack>
-        <hr />
       </Stack>
-      <Box my={6}>
+      <Stack my={6} spacing={8}>
         {work.map((commercial, i) => (
-          <Box key={i} my={8}>
-            <Stack mb={6}>
-              {commercial.link ? (
-                <BoldLink isExternal href={commercial.link}>
-                  <Heading size="md" fontWeight={""}>
-                    {commercial.name}
-                    <Icon ml={2} boxSize={3} as={FaExternalLinkAlt} />
-                  </Heading>
-                </BoldLink>
-              ) : (
-                <Heading size="md" fontWeight={""}>
-                  {commercial.name}
-                </Heading>
-              )}
-              <Flex justifyContent={"space-between"}>
-                <Box>{commercial.role}</Box>
-                <Box>{commercial.tech}</Box>
-              </Flex>
-            </Stack>
-
-            <Box>{commercial.content}</Box>
-            {i != work.length - 1 && (
-              <Box mt={6}>
-                <hr />
-              </Box>
-            )}
+          <Box>
+            <Accordion allowToggle>
+              <AccordionItem
+                border={"1px solid rgb(128, 128, 128)"}
+                borderRadius={10}
+                p={2}
+              >
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" flex={1} textAlign="left">
+                      <Flex
+                        alignItems={"center"}
+                        justifyContent={"space-between"}
+                      >
+                        <Stack>
+                          <Heading size="md">{commercial.name}</Heading>
+                          <Heading
+                            fontWeight={"normal"}
+                            size="sm"
+                            color={"gray"}
+                          >
+                            {commercial.role}
+                          </Heading>
+                        </Stack>
+                        <Box>
+                          <AccordionIcon />
+                        </Box>
+                      </Flex>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel>
+                  {commercial.link && (
+                    <Box mb={3}>
+                      <BoldLink href={commercial.link} isExternal>
+                        Visit <Icon ml={1} boxSize={3} as={FaExternalLinkAlt} />
+                      </BoldLink>
+                    </Box>
+                  )}
+                  {commercial.content}
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
           </Box>
         ))}
-      </Box>
+      </Stack>
     </Box>
   );
 }
