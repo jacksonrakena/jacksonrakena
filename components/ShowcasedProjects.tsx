@@ -52,15 +52,12 @@ const projects: ShowcasedProject[] = [
 ];
 
 export const ShowcasedProjects = () => {
-  let p = new Array(projects);
-  p.sort((a, b) => a.id - b.id);
   return (
     <>
       <Stack spacing={4} alignItems={"baseline"}>
         <Heading size="md">Some stuff I've made</Heading>
         <Flex flexDirection={"column"}>
-          {p
-            .map((project) => (
+          {projects.sort((a,b)=>a.id-b.id).map((project) => (
               <LinkBox key={project.id} mb={4} w={"100%"}>
                 <HStack
                   spacing={2}
