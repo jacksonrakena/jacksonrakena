@@ -26,7 +26,7 @@ const projects: ShowcasedProject[] = [
     id: 0,
     name: "Gradekeeper",
     description:
-      "The all-in-one course and grade management app, used by 500+ students at 15+ universities across the world",
+      "The all-in-one course and grade management app, used by 600+ students at 15+ universities across the world",
     link: "https://gradekeeper.xyz",
     icon: "https://app.gradekeeper.xyz/icons/android-chrome-512x512.png",
     tags: ["Next.js", "Prisma", "MySQL"],
