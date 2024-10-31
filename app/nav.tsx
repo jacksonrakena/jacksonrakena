@@ -13,11 +13,11 @@ export const Nav = () => {
     {
       name: "Work",
       to: "/work",
-    }/*,
+    } /*,
     {
       name: "Blog",
       to: "https://blog.jacksonrakena.com/",
-    },*/
+    },*/,
   ];
   const pathname = usePathname();
   return (
@@ -25,6 +25,7 @@ export const Nav = () => {
       <HStack spacing={6}>
         {routes.map((route) => (
           <Link
+            key={route.name}
             href={route.to}
             {...(route.to.startsWith("http")
               ? { target: "_blank", rel: "noreferrer" }

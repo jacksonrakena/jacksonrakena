@@ -55,9 +55,10 @@ export const ShowcasedProjects = () => {
   return (
     <>
       <Stack spacing={4} alignItems={"baseline"}>
-        <Heading size="md">Some stuff I've made</Heading>
         <Flex flexDirection={"column"}>
-          {projects.sort((a,b)=>a.id-b.id).map((project) => (
+          {projects
+            .sort((a, b) => a.id - b.id)
+            .map((project) => (
               <LinkBox key={project.id} mb={4} w={"100%"}>
                 <HStack
                   spacing={2}

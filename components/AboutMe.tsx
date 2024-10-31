@@ -40,7 +40,7 @@ export const AboutMe = () => {
             </HStack>
             <HStack spacing={2} alignItems={"center"}>
               <Icon w={5} h={5} as={IoLocationOutline} />
-              <Box>Sydney, AU &bull; Wellington, NZ</Box>
+              <Box>Sydney &bull; Wellington</Box>
             </HStack>
           </Stack>
         </Box>
