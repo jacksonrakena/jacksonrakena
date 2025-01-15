@@ -1,15 +1,4 @@
-import {
-  Avatar,
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  LinkBox,
-  LinkOverlay,
-  Stack,
-  Tag,
-  Text,
-} from "@chakra-ui/react";
+import Image from "next/image";
 
 interface ShowcasedProject {
   id: number;
@@ -17,7 +6,6 @@ interface ShowcasedProject {
   description: string;
   link: string;
   icon?: string;
-  hint?: string;
   tags: string[];
 }
 
@@ -54,66 +42,37 @@ const projects: ShowcasedProject[] = [
 export const ShowcasedProjects = () => {
   return (
     <>
-      <Stack spacing={4} alignItems={"baseline"}>
-        <Flex flexDirection={"column"}>
-          {projects
-            .sort((a, b) => a.id - b.id)
-            .map((project) => (
-              <LinkBox key={project.id} mb={4} w={"100%"}>
-                <HStack
-                  spacing={2}
-                  alignItems={"center"}
-                  p={4}
-                  _hover={{
-                    borderColor: "gray.400",
-                  }}
-                  transition={"0.2s"}
-                  key={project.id}
-                  direction={"row"}
-                  borderWidth={"1px"}
-                  rounded={"lg"}
-                >
-                  <Box>
-                    <LinkOverlay
-                      target="_blank"
-                      rel="noreferrer"
-                      href={project.link}
+      <div className="flex mt-8 flex-col space-y-4 align-baseline">
+        {projects
+          .sort((a, b) => a.id - b.id)
+          .map((project) => (
+            <div
+              transition={"0.2s"}
+              key={project.id}
+              className="hover:cursor-pointer hover:border-gray-400 items-center p-4 flex border-solid border border-gray-300 rounded-lg"
+            >
+              <div>
+                <div className="font-semibold">{project.name}</div>
+                <span>{project.description}</span>
+                <div className="flex mt-2 space-x-4">
+                  {project.tags?.map((t) => (
+                    <div
+                      className="bg-gray-100 rounded-lg p-1 px-1.5 text-xs text-gray-500 font-semibold"
+                      key={t}
                     >
-                      <Heading size="sm">
-                        {project.name}
-                        <Text
-                          fontWeight={"normal"}
-                          display={"inline"}
-                          color="GrayText"
-                        >
-                          {" "}
-                          {project.hint}
-                        </Text>
-                      </Heading>
-                    </LinkOverlay>
-                    <Text>{project.description}</Text>
-                    <HStack mt={2}>
-                      {project.tags?.map((t) => (
-                        <Tag colorScheme={"gray"} key={t} size="sm">
-                          {t}
-                        </Tag>
-                      ))}
-                    </HStack>
-                  </Box>
-                  {project.icon && (
-                    <Box>
-                      <Avatar
-                        background={"white"}
-                        name={project.icon}
-                        src={project.icon}
-                      />
-                    </Box>
-                  )}
-                </HStack>
-              </LinkBox>
-            ))}
-        </Flex>
-      </Stack>
+                      {t}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {project.icon && (
+                <div>
+                  <Image alt="" src={project.icon} width={100} height={100} />
+                </div>
+              )}
+            </div>
+          ))}
+      </div>
     </>
   );
 };

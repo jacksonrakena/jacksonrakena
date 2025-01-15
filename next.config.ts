@@ -14,6 +14,10 @@ export default createMDX({
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ["app.gradekeeper.xyz", "d.lu.je"],
+    domains: [
+      "app.gradekeeper.xyz",
+      "d.lu.je",
+      "avatars.githubusercontent.com",
+    ],
   },
 });
