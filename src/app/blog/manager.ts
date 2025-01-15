@@ -16,7 +16,7 @@ export function processFrontmatter(frontmatter: any): PostFrontmatter {
     ...(frontmatter as PostFrontmatter),
     date: new Date(frontmatter.date ?? Date.now()),
     tags: (frontmatter.tags ?? "").split(" "),
-    published: !!frontmatter.published,
+    published: frontmatter.published !== false,
   };
 }
 
@@ -26,16 +26,18 @@ export async function loadAllPostIds() {
 }
 
 export async function loadAllPosts() {
-  return await Promise.all(
-    (
-      await loadAllPostIds()
-    ).map((postId) =>
-      import(`@/../posts/${postId}.mdx`).then((post) => ({
-        ...processFrontmatter(post.frontmatter),
-        id: postId,
-      }))
+  return (
+    await Promise.all(
+      (
+        await loadAllPostIds()
+      ).map((postId) =>
+        import(`@/../posts/${postId}.mdx`).then((post) => ({
+          ...processFrontmatter(post.frontmatter),
+          id: postId,
+        }))
+      )
     )
-  );
+  ).filter((e) => e.published);
 }
 
 export async function loadPost(postId: string) {
