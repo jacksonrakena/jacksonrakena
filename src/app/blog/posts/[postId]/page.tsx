@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { loadAllPostIds, loadPost } from "../../manager";
 
 export const revalidate = 3600;
@@ -6,6 +7,20 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return (await loadAllPostIds()).map((f) => ({ postId: f }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ postId: string }>;
+}): Promise<Metadata> {
+  const { postId } = await params;
+  const post = await loadPost(postId);
+
+  return {
+    title: post.frontmatter.title,
+    description: "Jackson's blog",
+  };
 }
 
 export default async function Post({

@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { Box, HStack } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 
 export const Nav = () => {
@@ -13,11 +11,7 @@ export const Nav = () => {
     {
       name: "Blog",
       to: "/blog",
-    } /*,
-    {
-      name: "Blog",
-      to: "https://blog.jacksonrakena.com/",
-    },*/,
+    },
   ];
   const pathname = usePathname();
   return (

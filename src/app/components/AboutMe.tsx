@@ -1,9 +1,9 @@
-import { Briefcase, Github, Mail, Map } from "lucide-react";
+import { Briefcase, Github, LucideIcon, Mail, Map } from "lucide-react";
 import Image from "next/image";
 import { PropsWithChildren } from "react";
 
 export const SocialLink = (
-  props: PropsWithChildren<{ icon?: any; href?: string }>
+  props: PropsWithChildren<{ icon?: LucideIcon; href?: string }>
 ) => {
   return (
     <div className="flex space-x-2 items-center">

@@ -46,10 +46,11 @@ export const ShowcasedProjects = () => {
         {projects
           .sort((a, b) => a.id - b.id)
           .map((project) => (
-            <div
-              transition={"0.2s"}
+            <a
               key={project.id}
-              className="hover:cursor-pointer hover:border-gray-400 items-center p-4 flex border-solid border border-gray-300 rounded-lg"
+              href={project.link}
+              target="_blank"
+              className="transition-all hover:cursor-pointer hover:border-gray-400 items-center p-4 flex border-solid border border-gray-300 rounded-lg"
             >
               <div>
                 <div className="font-semibold">{project.name}</div>
@@ -70,7 +71,7 @@ export const ShowcasedProjects = () => {
                   <Image alt="" src={project.icon} width={100} height={100} />
                 </div>
               )}
-            </div>
+            </a>
           ))}
       </div>
     </>

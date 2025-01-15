@@ -14,7 +14,7 @@ export type PostFrontmatter = {
 export function processFrontmatter(frontmatter: any): PostFrontmatter {
   return {
     ...(frontmatter as PostFrontmatter),
-    date: new Date(frontmatter.date),
+    date: new Date(frontmatter.date ?? Date.now()),
     tags: (frontmatter.tags ?? "").split(" "),
     published: !!frontmatter.published,
   };
