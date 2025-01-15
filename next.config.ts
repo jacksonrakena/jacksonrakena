@@ -3,7 +3,11 @@ import createMDX from "@next/mdx";
 export default createMDX({
   options: {
     jsx: true,
-    remarkPlugins: [["remark-frontmatter"], ["remark-mdx-frontmatter"]],
+    remarkPlugins: [
+      ["remark-frontmatter"],
+      ["remark-mdx-frontmatter"],
+      ["remark-gfm"],
+    ],
   },
 })({
   typescript: {

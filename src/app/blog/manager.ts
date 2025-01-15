@@ -6,21 +6,22 @@ export type PostFrontmatter = {
   layout: "post";
   tags: string[];
   image?: string;
-  published?: boolean;
+  published: boolean;
   date: Date;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function processFrontmatter(frontmatter: any): PostFrontmatter {
   return {
     ...(frontmatter as PostFrontmatter),
     date: new Date(frontmatter.date),
     tags: (frontmatter.tags ?? "").split(" "),
+    published: !!frontmatter.published,
   };
 }
 
 export async function loadAllPostIds() {
   const posts = await readdir(path.join("posts"));
-  console.log;
   return posts.map((f) => f.replace(/(.mdx)|(.md)/, ""));
 }
 
@@ -43,7 +44,7 @@ export async function loadPost(postId: string) {
   );
 
   return {
-    component: PostComponent as React.FC<{ components: any }>,
+    component: PostComponent as React.FC,
     frontmatter: processFrontmatter(frontmatter),
   };
 }
