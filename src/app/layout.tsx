@@ -7,7 +7,12 @@ export const metadata: Metadata = {
   title: "Jackson Rakena",
   description: "Full-stack software engineer in Sydney, Australia",
   twitter: {
-    images: ["https://avatars.githubusercontent.com/u/44521335?v=4"],
+    images: [
+      {
+        width: 100,
+        url: "https://avatars.githubusercontent.com/u/44521335?v=4",
+      },
+    ],
   },
 };
 
