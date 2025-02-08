@@ -30,10 +30,10 @@ export const AboutMe = () => {
             <SocialLink icon={Github} href="https://github.com/jacksonrakena">
               jacksonrakena
             </SocialLink>
-            <SocialLink icon={Mail} href="mailto:jackson@rakena.co.nz">
-              jackson@rakena.co.nz
+            <SocialLink icon={Mail} href="mailto:jackson@rakena.com.au">
+              jackson@rakena.com.au
             </SocialLink>
-            <SocialLink icon={Map}>Sydney &bull; Wellington</SocialLink>
+            <SocialLink icon={Map}>Sydney</SocialLink>
             <SocialLink icon={Briefcase}>Atlassian</SocialLink>
           </div>
         </div>
