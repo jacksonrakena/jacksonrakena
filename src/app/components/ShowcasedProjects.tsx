@@ -19,24 +19,24 @@ const projects: ShowcasedProject[] = [
     icon: "https://app.gradekeeper.xyz/icons/android-chrome-512x512.png",
     tags: ["Next.js", "Prisma", "MySQL"],
   },
-  {
-    id: 2,
-    name: "Jacksonbot",
-    description:
-      "A Discord chat-bot that can play blackjack and show you pictures of cats. Serves over 50,000 users.",
-    link: "https://github.com/jacksonrakena/jacksonbot",
-    icon: "https://d.lu.je/avatar/679925967153922055",
-    tags: ["Rust", "Diesel", "PostgreSQL"],
-  },
-  {
-    id: 1,
-    name: "Ace In The Hole",
-    description:
-      "An online, multiplayer casino game with Texas Hold 'Em poker, blackjack, and 3-card poker.",
-    link: "https://github.com/jacksonrakena/ace-in-the-hole",
-    icon: "/assets/king_spades_white.png",
-    tags: ["Unity", "Networking", "C#"],
-  },
+  // {
+  //   id: 2,
+  //   name: "Jacksonbot",
+  //   description:
+  //     "A Discord chat-bot that can play blackjack and show you pictures of cats. Serves over 50,000 users.",
+  //   link: "https://github.com/jacksonrakena/jacksonbot",
+  //   icon: "https://d.lu.je/avatar/679925967153922055",
+  //   tags: ["Rust", "Diesel", "PostgreSQL"],
+  // },
+  // {
+  //   id: 1,
+  //   name: "Ace In The Hole",
+  //   description:
+  //     "An online, multiplayer casino game with Texas Hold 'Em poker, blackjack, and 3-card poker.",
+  //   link: "https://github.com/jacksonrakena/ace-in-the-hole",
+  //   icon: "/assets/king_spades_white.png",
+  //   tags: ["Unity", "Networking", "C#"],
+  // },
 ];
 
 export const ShowcasedProjects = () => {

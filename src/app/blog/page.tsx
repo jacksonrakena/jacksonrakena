@@ -5,7 +5,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Jackson's blog",
-  description: "yap",
+  description: "",
   twitter: {
     images: ["https://avatars.githubusercontent.com/u/44521335?v=4"],
   },
@@ -17,14 +17,13 @@ export default async function Blog() {
   );
   return (
     <>
-      <div className="font-semibold text-xl">blog posts:</div>
+      <div className="font-semibold text-xl">all posts</div>
       <div className="flex flex-col gap-y-8 mt-8">
         {postFronts.map((post) => (
           <div key={post.title}>
-            <a href={`/blog/posts/${post.id}`} className="hover:font-bold">
+            <a href={`/blog/posts/${post.id}`} className="hover:font-semibold">
               <div>{post.title}</div>
-              <div className="text-gray-500">
-                published{" "}
+              <div className="text-gray-500 text-sm">
                 {post.date.toLocaleDateString([], { dateStyle: "medium" })}
               </div>
             </a>

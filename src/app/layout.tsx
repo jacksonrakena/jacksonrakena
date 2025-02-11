@@ -30,11 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <div className="flex min-h-svh flex-col items-center gap-6 bg-background p-6 md:p-10">
+        <div className="flex h-screen flex-col items-center gap-6 bg-background p-6 md:p-10">
           <div className="w-full max-w-xl">
             <Nav />
           </div>
-          <div className="w-full max-w-xl">{children}</div>
+          <div className="w-full max-w-xl m-auto">{children}</div>
         </div>
       </body>
     </html>
