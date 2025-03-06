@@ -1,6 +1,6 @@
 import { Metadata, Viewport } from "next";
 import { Nav } from "./nav";
-
+import "@fontsource/ibm-plex-sans";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -31,10 +31,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased`}>
         <div className="flex h-screen flex-col items-center gap-6 bg-background p-6 md:p-10">
-          <div className="w-full max-w-xl">
+          {/* <div className="w-full max-w-xl">
             <Nav />
-          </div>
-          <div className="w-full max-w-xl m-auto">{children}</div>
+          </div> */}
+          <div className="m-auto">{children}</div>
         </div>
       </body>
     </html>
