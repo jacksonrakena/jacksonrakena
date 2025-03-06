@@ -3,7 +3,6 @@ import {
   Github,
   LucideIcon,
   AtSign,
-  Map,
   MapPinned,
 } from "lucide-react";
 import { PropsWithChildren } from "react";

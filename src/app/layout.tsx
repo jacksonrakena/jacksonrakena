@@ -1,5 +1,5 @@
 import { Metadata, Viewport } from "next";
-import { Nav } from "./nav";
+
 import "@fontsource/ibm-plex-sans";
 import "./globals.css";
 
