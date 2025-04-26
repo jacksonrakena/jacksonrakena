@@ -2,7 +2,7 @@ import { AboutMe, SocialLink } from "./components/AboutMe";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-4">
       <AboutMe />
       {/* <ShowcasedProjects /> */}
       {/* <hr className="my-6" /> */}
