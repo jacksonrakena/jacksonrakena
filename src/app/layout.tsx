@@ -1,7 +1,8 @@
 import { Metadata, Viewport } from "next";
 
-import "@fontsource/ibm-plex-sans";
-import "./globals.css";
+import "@radix-ui/themes/styles.css";
+import { Theme } from "@radix-ui/themes";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Jackson Rakena",
@@ -29,13 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <div className="flex h-screen flex-col items-center gap-6 bg-background p-6 md:p-10">
-          {/* <div className="w-full max-w-xl">
-            <Nav />
-          </div> */}
-          <div className="m-auto">{children}</div>
-        </div>
+      <body>
+        <ThemeProvider attribute={'class'}>
+          <Theme accentColor="mint">
+            {children}
+          </Theme>
+        </ThemeProvider>
       </body>
     </html>
   );

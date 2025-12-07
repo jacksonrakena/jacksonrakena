@@ -1,20 +1,41 @@
-import { AboutMe, SocialLink } from "./components/AboutMe";
+import { Avatar, Card, Flex, Box, Text, Container, Separator, Link } from "@radix-ui/themes";
 
-export default function HomePage() {
+export default function Site() {
   return (
-    <div className="flex flex-col gap-4">
-      <AboutMe />
-      {/* <ShowcasedProjects /> */}
-      {/* <hr className="my-6" /> */}
-      <div className="my-6 flex flex-row space-x-1 mx-auto text-sm text-gray-500">
-        <SocialLink href="https://status.rakena.co.nz/">
-          Service status
-        </SocialLink>
-        {/* <span>&bull;</span>
-          <SocialLink href="https://jackson.url.lol/discord">
-            My Discord server
-          </SocialLink> */}
-      </div>
-    </div>
+    <Container size="1">
+      <Flex pt={'150px'} direction={'column'} gap="4" justify={'center'}>
+        <Card>
+          <Flex gap="3" align="center">
+            <Avatar
+              src="https://avatars.githubusercontent.com/u/44521335?v=4"
+              fallback="JR"
+            />
+            <Box>
+              <Text as="div" size="2" weight="bold">
+                Jackson Rakena
+              </Text>
+            </Box>
+          </Flex>
+        </Card>
+
+        <Box>
+          <Text size="2">
+            Building scalable Kubernetes storage at Atlassian
+            <Separator my="3" size="4" />
+            <Flex gap="3" align="center">
+              <Link href="https://github.com/jacksonrakena">
+                jacksonrakena
+              </Link>
+              <Separator orientation="vertical" />
+              <Link href="mailto:jackson@rakena.com.au">
+                jackson@rakena.com.au
+              </Link>
+              <Separator orientation="vertical" />
+              Sydney, Australia
+            </Flex>
+          </Text>
+        </Box>
+      </Flex>
+    </Container>
   );
-}
+};
