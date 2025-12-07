@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider attribute={'class'}>
-          <Theme accentColor="mint">
+          <Theme>
             {children}
           </Theme>
         </ThemeProvider>
