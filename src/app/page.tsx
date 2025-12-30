@@ -20,7 +20,7 @@ export default function Site() {
 
         <Box>
           <Text size="2">
-            Building scalable Kubernetes storage at Atlassian
+            Kubernetes engineer at Atlassian
             <Separator my="3" size="4" />
             <Flex gap="3" align="center">
               <Link href="https://github.com/jacksonrakena">
